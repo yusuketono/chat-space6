@@ -1,0 +1,19 @@
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__user
+        東野裕輔
+      .side-header__box__menu
+        %p.side-header__box__menu__new-group
+          = link_to "#" do
+            =icon('far', 'edit', class: 'icon')
+        %p.side-header__box__menu__edit-user 
+          = link_to "#" do
+            = icon('fas', 'cog',class: 'icon')
+
+  .groups
+    .group
+      %p.group__name
+        グループ
+      %p.group__message
+        メッセージ

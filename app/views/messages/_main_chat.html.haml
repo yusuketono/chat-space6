@@ -1,0 +1,33 @@
+.chat-main
+  .main-header
+    .main-header__left
+      .main-header__left__group
+        サンプル
+      %ul.main-header__left__list
+        members;
+        %li.main-header__left__list__member
+          東野1
+    = link_to "#" do
+      .main-header__edit
+        Edit
+
+  .messages
+    .message
+      .message__box
+        %p.message__box__user
+          東野裕輔
+        %p.message__box__date
+          2019.12.25
+      %p.message__text
+        今年のクリスマスは
+    .message
+      .message__box
+        %p.message__box__user
+          東野裕輔
+        %p.message__box__date
+          2019.12.25
+      %p.message__text
+        暇になりそうです
+
+  .form
+    .new_message
