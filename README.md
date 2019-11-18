@@ -1,26 +1,22 @@
-# 学習メモ
+#　Chatspace(11項目)
 
-##　Chatspace
+## 0.Git
+## 1.DB設計
+## 2.viewの実装
+## 3.ユーザー管理機能
+## 4.グループ作成
+## 5.メッセージ送信機能
+## 6.投稿機能のテスト
+## 7.メッセージ送信の非同期化
+## 8.インクリエンタルサーチ
+## 9.自動更新機能
+## 10.AWS
 
-### DB設計
-### viewの実装
-### ユーザー管理機能
-### グループ作成
-### メッセージ送信機能
-### 投稿機能のテスト
-### メッセージ送信の非同期化
-### インクリエンタルサーチ
-### 自動更新機能
+# その他
 
-## デプロイ
+## 正規表現
+## javasprict
 
-### AWS
-
-## その他
-
-### 正規表現
-### javasprict
-### Git
 
 
 # README
@@ -74,3 +70,18 @@
 ディレクトリ名は「chat-space6」になっているが、DB名はchat-space5になっている。
 ・viewの実装について
 面倒さを避けるため変数、色等の定義はしていない。
+
+・rails g controller usersでいらんファイルを作成したかも
+  create  app/controllers/users_controller.rb
+  invoke  haml
+    exist    app/views/users
+  invoke  test_unit
+  create    test/controllers/users_controller_test.rb
+  invoke  helper
+  create    app/helpers/users_helper.rb
+  invoke    test_unit
+  invoke  assets
+  invoke    coffee
+  create      app/assets/javascripts/users.coffee
+  invoke    scss
+  create      app/assets/stylesheets/users.scss
