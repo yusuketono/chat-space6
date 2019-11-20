@@ -1,21 +1,28 @@
 #　Chatspace(11項目)
 
 ## 0.Git
+
 ## 1.DB設計
+
 ## 2.viewの実装
+
 ## 3.ユーザー管理機能
 ## 4.グループ作成
 ## 5.メッセージ送信機能
 ## 6.投稿機能のテスト
+
 ## 7.メッセージ送信の非同期化
 ## 8.インクリエンタルサーチ
 ## 9.自動更新機能
+
 ## 10.AWS
 
 # その他
 
-## 正規表現
-## javasprict
+## 1.正規表現
+## 2.javasprict
+## 3.SQL
+## 4.テスト
 
 
 
@@ -85,3 +92,10 @@
   create      app/assets/javascripts/users.coffee
   invoke    scss
   create      app/assets/stylesheets/users.scss
+
+ グループ機能実装の5までは無事完了
+  しかし、リンクの色が初期値になっている
+  →color:white;を選択して攻略
+
+  # メモ
+ 
