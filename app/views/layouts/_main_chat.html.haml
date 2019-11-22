@@ -2,26 +2,32 @@
   .main-header
     .main-header__left
       .main-header__left__group
-        = @group.name
+        サンプル
       %ul.main-header__left__list
-        Members; 
+        members;
         %li.main-header__left__list__member
-          - @group.group_users.each do |group_user|
-            = group_user.user.name
-            
-    = link_to edit_group_path(@group) do
+          東野1
+    = link_to "#" do
       .main-header__edit
         Edit
 
   .messages
-    = render @messages
-    -# = render partial: 'message', collection: @messages
+    .message
+      .message__box
+        %p.message__box__user
+          東野裕輔
+        %p.message__box__date
+          2019.12.25
+      %p.message__text
+        今年のクリスマスは
+    .message
+      .message__box
+        %p.message__box__user
+          東野裕輔
+        %p.message__box__date
+          2019.12.25
+      %p.message__text
+        暇になりそうです
 
   .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon2')
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+    .new_message
