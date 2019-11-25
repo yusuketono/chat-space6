@@ -7,9 +7,14 @@ class MessagesController < ApplicationController
   end
 
   def create
+    # binding.pryするとこんな感じ
+    # {"utf8"=>"✓", "authenticity_token"=>"d5lWzIIDidVW703/Vd41HvEipOtaUG6bopaYf3SP0Qk16KUo+QrQv6sn8fRRcxK10xjNIs4NowGhcJLm6MrLHw==", "message"=>{"content"=>"s"}, "controller"=>"messages", "action"=>"create", "group_id"=>"1"} 
     @message = @group.messages.new(message_params)
     if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
+      respond_to do |format|
+        format.html {redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'}
+        format.json
+      end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
