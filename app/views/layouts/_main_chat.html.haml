@@ -15,7 +15,7 @@
 
   .messages
     = render @messages
-    -# = render partial: 'message', collection: @messages
+    -# = render partial: 'message', collection: @messagesの略
 
   .form
     = form_for [@group, @message] do |f|
@@ -25,3 +25,13 @@
           = icon('fas', 'image', class: 'icon2')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'form__submit'
+
+-# ビューの実装時点ではこんな感じの記述になる
+    -# .form
+    -#   %form
+    -#     %input.form__message
+    -#     .form__mask
+    -#       %label.form__mask__image
+    -#         = icon('fa','image',class: 'icon')
+    -#         %input.hidden{type: 'file'}
+    -#     %input.form__submit{type: 'submit', value: 'Send'}
