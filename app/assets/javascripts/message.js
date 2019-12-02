@@ -1,17 +1,45 @@
 $(function(){   //window.addEventListener('load', function() { 処理 });(HTMLの読み込み)と同様の役割
 
+// 三項演算子バージョンのbuildHTML
+  // function buildHTML(message){
+  //     const image = message.image ? `<img src="${message.image}">` : "" ;
+  //     const html = `<div class="message" data-message_id= "${message.id}">
+  //                     <div class="message__box">
+  //                       <p class="message__box__user">${message.user_name}</p>
+  //                       <p class="message__box__date">${message.created_at}</p>
+  //                     </div>
+  //                     <div class="lower-message">
+  //                     <p class="lower-message__content">${message.content}</p>
+  //                     <p class="lower-message__image">${image}</p>
+  //                     </div>
+  //                   </div>`
+  //   return html
+  // }
+
+// if文バージョンのbuildHTML
   function buildHTML(message){
-      const image = message.image ? `<img src="${message.image}">` : "" ;
-      const html = `<div class="message" data-message_id= "${message.id}">
-                      <div class="message__box">
-                        <p class="message__box__user">${message.user_name}</p>
-                        <p class="message__box__date">${message.created_at}</p>
-                      </div>
-                      <div class="lower-message">
-                      <p class="lower-message__content">${message.content}</p>
-                      <p class="lower-message__image">${image}</p>
-                      </div>
-                    </div>`
+    if (message.image) {
+      var html = `<div class="message" data-message_id= "${message.id}">
+      <div class="message__box">
+        <p class="message__box__user">${message.user_name}</p>
+        <p class="message__box__date">${message.created_at}</p>
+      </div>
+      <div class="lower-message">
+      <p class="lower-message__content">${message.content}</p>
+      <p class="lower-message__image">${message.image}</p>
+      </div>
+    </div>`
+    } else {
+      var html = `<div class="message" data-message_id= "${message.id}">
+      <div class="message__box">
+        <p class="message__box__user">${message.user_name}</p>
+        <p class="message__box__date">${message.created_at}</p>
+      </div>
+      <div class="lower-message">
+      <p class="lower-message__content">${message.content}</p>
+      </div>
+    </div>`
+    }
     return html
   }
 
