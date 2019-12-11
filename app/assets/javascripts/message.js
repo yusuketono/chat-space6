@@ -104,3 +104,4 @@ $(function(){   //window.addEventListener('load', function() { 処理 });(HTML�
   setInterval(reloadMessages, 7000);
 });
 
+ 
